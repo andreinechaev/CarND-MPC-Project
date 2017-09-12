@@ -27,11 +27,11 @@ const double Lf = 2.67;
 // The reference velocity is set to 77.5 mph.
 const double REF_CTE = 0;
 const double REF_EPSI = 0;
-const double REF_V = 77.5;
+const double REF_V = 45.5;
 
 // Set weights parameters for the cost function
-const double W_CTE = 188.4;
-const double W_EPSI = 188.32;
+const double W_CTE = 198.4;
+const double W_EPSI = 192.32;
 const double W_V = 0.261;
 const double W_DELTA = 6;
 const double W_A = 7.;
@@ -41,7 +41,7 @@ const double W_DA = 0.1;
 // Set lower and upper limits for variables.
 const double DED25RAD = 0.436332; // 25 deg in rad, used as delta bound
 const double MAXTHR = 1.0; // Maximal a value
-const double BOUND = 1.0e18; // Bound value for other variables
+const double BOUND = 1.0e19; // Bound value for other variables
 
 class MPC {
 public:
