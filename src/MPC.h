@@ -24,7 +24,7 @@ const double Lf = 2.67;
 
 // Set desired cte, epsi and speed
 // Both the reference cross track and orientation errors are 0.
-// The reference velocity is set to 77.5 mph.
+// The reference velocity is set to 45.5 mph.
 const double REF_CTE = 0;
 const double REF_EPSI = 0;
 const double REF_V = 45.5;

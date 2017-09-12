@@ -44,8 +44,16 @@ psi_[t+1] = psi[t] + v[t] / Lf * delta[t] * dt
 v_[t+1] = v[t] + a[t] * dt
 ```
 
-## Timestep Length and Elapsed Duration/Model Predictive Control with Latency
+## Timestep Length and Elapsed Duration
 
 With timestamp length (N) equals to 20 and delta time (Dt) 100ms the car successfully gets over the track.
-During the latency throttle isn't changed. It's achieved by setting lower and upper bounds. With all that configurations
-the car drives with speed up to 50mph.
+
+During the development I tried to bring N to a higher value like 30. Such increase requires more computational power and
+is unnecessary, since the car can go safely with speed up to 50mph. Smaller `Dt` leads to smaller time horizon and higher error rate.
+So the car's behaviour is unstable.  
+
+## Model Predictive Control with Latency
+
+The first step is to take the previous calculation into account. Using the calculations from the previous calculations.
+Second step to apply cost function introduced in the lesson and using velocity and it's delta. 
+The best result achieved with limiting speed. 
