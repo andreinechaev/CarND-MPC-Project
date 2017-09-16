@@ -57,3 +57,10 @@ So the car's behaviour is unstable.
 The first step is to take the previous calculation into account. Using the calculations from the previous calculations.
 Second step to apply cost function introduced in the lesson and using velocity and it's delta. 
 The best result achieved with limiting speed. 
+
+To deal with latency we simply make the receiver sleep for 100ms before new entries. 
+
+```
+this_thread::sleep_for(chrono::milliseconds(100));
+ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+```
